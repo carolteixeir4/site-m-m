@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato com Fornecedor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .contato-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        .success-message,
+        .error-message {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./produtos.html">Produtos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./contatos.html">Contato</a>
+            </li>
+        </ul>
+        <div class="d-flex">
+            <input type="text" id="lupa">
+        </div>
+        <div class="brasil">
+            <img src="./Bandeira do Brasil.png" alt="Bandeira do Brasil" width="40px">
+        </div>
+        <div class="carrinho">
+            <img src="./Carinho de Compra.png" alt="Carinho de Compra" width="35px">
+        </div>
+        <div class="user">
+            <img src="./Usuário.png" alt="Usuário" width="30px">
+        </div>
+        <div class="mm"><img src="./logo M.M.png" alt="logo M.M" width="250px"></div>
+    </div>
+
+    <div class="marrom">
+        <p>.</p>
+    </div>
+
+    <div class="corpo">
+        <div class="container mt-0 contato">
+            <p>Entre em contato conosco para informações sobre fornecimento de produtos ou qualquer outra consulta relacionada.</p>
+
+            <div id="errorMessage" class="alert alert-danger error-message">
+                Ocorreu um erro. Por favor, tente novamente.
+            </div>
+
+            <form id="contactSupplierForm">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome:</label>
+                    <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem:</label>
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+            </form>
+
+            <div id="successMessage" class="alert alert-success success-message">
+                Sua mensagem foi enviada com sucesso! Entraremos em contato em breve.
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.getElementById("contactSupplierForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+          
+            var randomError = Math.random() < 0.5;
+            if (randomError) {
+                document.getElementById("errorMessage").style.display = "block";
+                document.getElementById("successMessage").style.display = "none";
+            } else {
+            
+                document.getElementById("successMessage").style.display = "block";
+                document.getElementById("errorMessage").style.display = "none";
+             
+                this.reset();
+            }
+        });
+    </script>
+</body>
+
+</html>

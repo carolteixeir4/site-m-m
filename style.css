@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.head {
+    background-color: #fff;
+    height: 120px;
+    width: 100%;
+    padding: 35px;
+    display: flex;
+}
+
+.corpo {
+    background-color: #FFD43E;
+    height: 83.5vb;
+    width: 100%;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+    margin-left: 50%;
+}
+
+
+#lupa {
+    background: url("lupa.png") no-repeat right / 15px;
+    border-radius: 10px;
+    width: 200px;
+    background-color: #c8c8c8;
+
+}
+
+.brasil,
+.user,
+.carrinho {
+    display: flex;
+    margin-left: 40px;
+    align-items: center;
+}
+
+.mm {
+    position: absolute;
+    right: 43%;
+    top: 5%;
+}
+
+.marrom{
+    background-color: #4B230F;
+    height: 3px;
+}
+
+.barras1{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+.barras{
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+}
+
+.slid1{
+    width: 800px;
+    border-radius: 150px;
+    background-color: #ffeba4;
+    padding: 30px;
+}
+
+.slid2{
+    width: 300px;
+    border-radius: 150px;
+    background-color: #ffeba4;
+    padding: 30px;
+}
+ 
+.slid3{
+    width: 550px;
+    border-radius: 150px;
+    background-color: #ffeba4;
+    padding: 30px;
+}
+
+.carousel{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 130px;
+    margin-left: 50%;
+}
+
+.produtos {
+    width: 800px;
+    position: absolute;
+    top: 180px;
+    margin-left: 20px;
+}
+
+.contato {
+
+    position: absolute;
+    top: 200px;
+    left: 100px;
+}
